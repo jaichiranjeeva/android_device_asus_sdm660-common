@@ -1,13 +1,53 @@
+gsm.version.baseband               u:object_r:baseband_prop:s0
+persist.cdfinger.ready             u:object_r:cdfinger_prop:s0
+property.cdfinger.enablesave       u:object_r:cdfinger_prop:s0
+persist.vendor.runin.fp            u:object_r:cdfinger_prop:s0
+
+# Audio
+use.audio.eu.parameters            u:object_r:hal_audio_prop:s0
+
+# Camera
+persist.vendor.camera.bokeh.dumpimg    u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.HAL3.enabled     u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.pickres.prop_hdr        u:object_r:vendor_camera_prop:s0
+vendor.debug.camera.prop_picselfie     u:object_r:vendor_camera_prop:s0
+vendor.debug.camera.prop_bokeh         u:object_r:vendor_camera_prop:s0
+vendor.debug.camera.prop_hdr           u:object_r:vendor_camera_prop:s0
+vendor.debug.camera.prop_dis           u:object_r:vendor_camera_prop:s0
+
 # Bluetooth
 ro.btmac                                      u:object_r:btmac_prop:s0
 
-# Camera
-persist.vendor.camera.hdring                  u:object_r:vendor_camera_prop:s0
-persist.vendor.camera.pickres.prop_hdr        u:object_r:vendor_camera_prop:s0
-
-# Fingerprint
-property.cdfinger.enablesave                  u:object_r:vendor_fingerprint_prop:s0
-persist.vendor.runin.fp                       u:object_r:vendor_fingerprint_prop:s0
-
 # NFC
 ro.hq.support.nfc                             u:object_r:nfc_sensors_prop:s0
+
+# Fix for WLAN tethering offload
+# SELinux : avc:  denied  { set } for property=wifi.active.interface pid=2918 uid=1010 gid=1010 scontext=u:r::s0 tcontext=u:object_r:default_prop:s0 tclass=property_service
+wifi.active.interface               u:object_r:exported_wifi_prop:s0
+
+# Spectrum
+persist.spectrum.profile                      u:object_r:spectrum_prop:s0
+
+# MSM thermal profile
+persist.cpucore.profile            u:object_r:cpucore_prop:s0
+
+#TCP
+persist.tcp.profile		   u:object_r:tcp_prop:s0
+
+# Dirac
+audio.dirac.                        u:object_r:dirac_prop:s0
+audio.dirac.logging                 u:object_r:dirac_prop:s0
+persist.audio.dirac.                u:object_r:dirac_prop:s0
+persist.dirac.acs.controller        u:object_r:vendor_audio_prop:s0
+persist.dirac.acs.storeSettings     u:object_r:vendor_audio_prop:s0
+persist.dirac.acs.ignore_error      u:object_r:vendor_audio_prop:s0
+ro.audio.soundfx.dirac              u:object_r:vendor_audio_prop:s0
+persist.audio.dirac.speaker         u:object_r:vendor_audio_prop:s0
+
+# Dolby
+persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_prop:s0
+
+# GPU/CPU Boosts
+persist.zenparts.gpu_profile                  u:object_r:boosts_prop:s0
+persist.zenparts.cpu_profile                  u:object_r:boosts_prop:s0
+
