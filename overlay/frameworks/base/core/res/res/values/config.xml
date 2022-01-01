@@ -300,12 +300,26 @@
     <integer name="config_keyChordPowerVolumeUp">1</integer>
 
     <!-- Whether device has a notch -->
-    <bool name="config_haveNotch">true</bool>
+    <bool name="config_haveNotch">false</bool>
 
     <!-- Whether device supports gaming mode profiles -->
     <bool name="config_gamingmode_performance">true</bool>
 
     <!-- Whether to enable Adaptive Charging -->
     <bool name="config_supportAdaptiveCharging">true</bool>
+
+    <!-- Whether device has notification LED -->
+    <bool name="config_hasNotificationLed">true</bool>
+
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">@bool/config_intrusiveNotificationLed</bool>
+
+    <!-- Does the battery LED support multiple colors?
+       Used to decide if the user can change the colors -->
+    <bool name="config_multiColorBatteryLed">false</bool>
+
+    <!-- Do the battery/notification LEDs support pulsing?
+      Used to decide if we show pulse settings -->
+    <bool name="config_ledCanPulse">true</bool>
 
 </resources>

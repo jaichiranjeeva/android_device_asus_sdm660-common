@@ -71,6 +71,12 @@ ro.surface_flinger.set_display_power_timer_ms=10000
 ro.surface_flinger.set_touch_timer_ms=5000
 ro.surface_flinger.set_idle_timer_ms=9000
 
+# Spark-OS
+ro.spark.device.name=Asus Zenfone Max Pro M1
+ro.spark.group.url=https://t.me/sparkx00td
+ro.spark.maintainer=Jai chiranjeeva
+ro.spark.maintainer.username=jai_91
+
 # Time
 persist.timed.enable=true
 
